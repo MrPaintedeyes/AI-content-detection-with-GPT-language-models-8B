@@ -1,6 +1,5 @@
 # DOCUMENTATION: pulled data using the tool from 
-# https://github.com/ranaroussi/yfinance/blob/main/README.md#installation 
-# that leverages the Yahoo! API
+# #https://github.com/ranaroussi/yfinance/blob/main/README.md#installation git that leverages the Yahoo! API
 
 # importing the needed packages
 import yfinance as yf
