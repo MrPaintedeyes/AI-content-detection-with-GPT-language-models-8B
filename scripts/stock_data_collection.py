@@ -18,5 +18,5 @@ stock_data = yf.download(stock_name, start="2014-01-01", end="2023-12-31")
 stock_data_file_path = os.path.join('data', f'{stock_name}_stock_data.csv')
 stock_data.to_csv(stock_data_file_path)
 
-# control message
+# printing control message
 print(f'Stock data for {stock_name} saved to {stock_data_file_path}')
