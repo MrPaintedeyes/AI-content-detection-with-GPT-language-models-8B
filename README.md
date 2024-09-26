@@ -37,3 +37,64 @@ The repository will contain:
 - Scripts folder: Python scripts for data scraping, preprocessing, and analysis.
 - Results folder: Lexicon and theme visualizations (barplots).
 - Instructions to reproduce the results, including setting up the NLP pipeline and utilizing the gemini-1.5-flash API for thematic analysis, will be provided. Steps for fine-tuning the LLM (optional) will also be included if that part is attempted.
+
+## Repository high-level structure
+```plaintext
+linkedin_analysis/                   # Main project directory
+│
+├── data/                            # Directory for data storage
+│   ├── raw/                         # Raw data from scraping (CSV, JSON, etc.)
+│   ├── processed/                   # Processed data (tokenized, cleaned, etc.)
+│   └── README.md
+│   
+├── notebooks/                       # Jupyter notebooks for experimentation and prototyping
+│   ├── analysis.ipynb               # Example notebook for trying out analyses
+│   └── README.md
+│
+├── src/                             # Main Python package (all code resides here)
+│   ├── __init__.py                  # Init file to make this a package
+│   │
+│   ├── scraping/                    # LinkedIn scraping module
+│   │   ├── __init__.py              # Init file for the module
+│   │   ├── scraping.py              # Script for scraping LinkedIn posts
+│   │   └── README.md
+│   │
+│   ├── nlp_processing/              # NLP processing module
+│   │   ├── __init__.py              # Init file for the module
+│   │   ├── nlp_processing.py        # Script for tokenization, lemmatization, etc.
+│   │   └── README.md
+│   │
+│   ├── thematic_analysis/           # Thematic analysis module (using Gemini API)
+│   │   ├── __init__.py              # Init file for the module
+│   │   ├── thematic_analysis.py     # Script for interacting with the Gemini API
+│   │   └── README.md
+│   │
+│   ├── visualization/               # Data visualization module
+│   │   ├── __init__.py              # Init file for the module
+│   │   ├── visualization.py         # Script for creating visualizations
+│   │   └── README.md
+│   │
+│   ├── llm_finetuning/              # (Optional) LLM fine-tuning module
+│   │   ├── __init__.py              # Init file for the module
+│   │   ├── finetuning.py            # Script for fine-tuning a language model
+│   │   └── README.md
+│   │
+│   └── web_app/                     # Web application module
+│       ├── __init__.py              # Init file for the module
+│       ├── app.py                   # Main Flask or Streamlit app script
+│       ├── templates/               # HTML templates for the web app (Flask only)
+│       ├── static/                  # Static assets for the web app (CSS, JS, etc.)
+│       └── README.md
+│    
+├── tests/                           # Directory for unit tests
+│   ├── __init__.py                  # Init file to make it a test package
+│   ├── test_scraping.py             # Unit tests for the scraping module
+│   ├── test_nlp_processing.py       # Unit tests for the NLP module
+│   ├── test_thematic_analysis.py    # Unit tests for thematic analysis module
+│   ├── test_visualization.py        # Unit tests for the visualization module
+│   └── README.md
+│
+├── run_pipeline.py                  # Entry-point script for testing the whole repository
+├── requirements.txt                 # List of Python dependencies
+├── setup.py                         # Setup file to install this package (optional)
+└── README.md                        # Project overview and instructions
