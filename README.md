@@ -43,10 +43,143 @@ The rise of AI-generated content presents a growing need for low-resource, scala
 - **`reports/`**: Figures and summary reports of findings.
 - **`tests/`**: Unit tests for verifying the correctness of modules.
 
-### How to Reproduce Results
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your_username/ai-text-detection.git
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
+```bash
+AI-content-detection-with-gpt-models/
+│
+├── data/  # Folder containing datasets for the project
+│   ├── raw/  # Raw datasets directly scraped or collected
+│   │   ├── paul_graham_blog_posts.csv  # Human-generated blog posts dataset
+│   │   ├── ai_generated_posts.csv  # AI-generated blog posts dataset
+│   ├── processed/  # Processed datasets ready for analysis or modeling
+│   │   ├── combined_dataset.csv  # Unified dataset with human and AI texts
+│   │   ├── thematic_categories.csv  # Dataset with thematic labels for human content
+│   │   ├── lexicon_analysis.csv  # Dataset summarizing lexicon analysis results
+│   └── README.md  # Documentation for the `data/` folder
+│
+├── notebooks/  # Jupyter notebooks for exploratory data analysis and prototyping
+│   ├── data_preprocessing.ipynb  # Notebook for data cleaning and preprocessing
+│   ├── dataset_analysis.ipynb  # Exploratory analysis of human and AI datasets
+│   ├── content_generation.ipynb  # Notebook demonstrating AI text generation
+│   ├── text_classification.ipynb  # Notebook for text classification experiments
+│   ├── evaluation_metrics.ipynb  # Computing and analyzing performance metrics
+│   └── README.md  # Documentation for the `notebooks/` folder
+│
+├── src/  # Source code for the project's core functionality
+│   ├── scraping/  # Modules for web scraping
+│   │   ├── scrape_paul_graham.py  # Script for scraping Paul Graham's blog posts
+│   │   ├── README.md  # Documentation for `scraping/`
+│   ├── preprocessing/  # Modules for preprocessing datasets
+│   │   ├── normalize_tokenize_lemmatize.py  # Text normalization, tokenization, lemmatization
+│   │   ├── thematic_coding.py  # Assigning thematic categories to texts
+│   │   ├── lexicon_analysis.py  # Performs lexicon analysis on datasets
+│   │   ├── dataset_mixing.py  # Combines and randomizes datasets for classification
+│   │   ├── README.md  # Documentation for `preprocessing/`
+│   ├── content_generation/  # Modules for generating AI content
+│   │   ├── generate_ai_texts.py  # Generates AI content using GPT-based models
+│   │   ├── README.md  # Documentation for `content_generation/`
+│   ├── classification/  # Modules for text classification tasks
+│   │   ├── zero_shot_classification.py  # Zero-shot classification implementation
+│   │   ├── few_shot_classification.py  # Few-shot classification implementation
+│   │   ├── evaluate_performance.py  # Evaluates classification performance
+│   │   ├── README.md  # Documentation for `classification/`
+│   ├── visualization/  # Modules for creating visualizations
+│   │   ├── plot_thematic_distribution.py  # Plots thematic distribution of datasets
+│   │   ├── plot_lexicon_analysis.py  # Visualizes lexicon analysis results
+│   │   ├── plot_performance_metrics.py  # Plots performance metrics comparison
+│   │   ├── README.md  # Documentation for `visualization/`
+│   ├── utils/  # Utility functions shared across modules
+│   │   ├── data_loader.py  # Loads datasets into Python for processing
+│   │   ├── config.py  # Configuration and constants used across scripts
+│   │   ├── README.md  # Documentation for `utils/`
+│   └── README.md  # Documentation for `src/`
+│
+├── reports/  # Contains results and visualizations
+│   ├── figures/  # Stores generated visualizations and figures
+│   │   ├── thematic_distribution.png  # Plot of thematic distribution
+│   │   ├── lexicon_analysis.png  # Plot showing lexicon analysis results
+│   │   ├── performance_metrics.png  # Comparison of performance metrics
+│   └── results_summary.md  # Summary report of findings and results
+│
+├── tests/  # Unit tests for verifying correctness of project modules
+│   ├── test_scraping.py  # Tests for the web scraping module
+│   ├── test_preprocessing.py  # Tests for preprocessing functions
+│   ├── test_classification.py  # Tests for text classification scripts
+│   ├── test_visualization.py  # Tests for visualization scripts
+│   └── README.md  # Documentation for `tests/`
+│
+├── requirements.txt  # Python dependencies for the project
+├── README.md  # Overview of the project and setup instructions
+├── .gitignore  # Specifies files and folders to be ignored by Git
+├── LICENSE  # Licensing information for the project
+└── setup.py  # Makes the project installable as a Python package
+
+
+## Getting started
+### Step 1: clone the repository
+1. Clone the repository to your local machine:
+```bash
+git clone https://github.com/your_username/ai-text-detection.git
+cd ai-text-detection
+
+### Step 2: Set Up the Environment
+2. Set up a virtual environment (optional but recommended):
+```bash
+python3 -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+
+4. Run tests to validate setup:
+```bash
+python -m unittest discover tests/
+
+### Step 3: Data Preparation and AI content generation
+1. Scrape Paul Graham’s blog posts:
+```bash
+python src/scraping/scrape_paul_graham.py
+
+2. Enrich human-generated dataset with themes' codes through LLM-based thematic analysis:
+```bash
+python src/thematic_coding.py
+
+3. Generate AI texts aligned with the human content for themes:
+```bash
+python src/content_generation/generate_ai_texts.py
+
+4. Text processing of both datasets before linguistic analysis:
+```bash
+python src/preprocessing/normalize_tokenize_lemmatize.py
+
+5. Lexicon analysis to ensure datasets' linguistic alignment
+```bash
+python src/preprocessing/lexicon_analysis.py
+
+6. Unify the two datasets in balanced and homogeneous way:
+```bash
+python src/preprocessing/dataset_mixing.py
+
+### Step 5: Classification
+1. Perform zero-shot classification:
+```bash
+python src/classification/zero_shot_classification.py
+
+2. Perform few-shot classification:
+```bash
+python src/classification/few_shot_classification.py
+
+### Step 6: Visualizations
+Generate visualizations for analysis:
+
+1. Plot thematic distribution:
+```bash
+python src/visualization/plot_thematic_distribution.py
+
+2. Plot lexicon analysis:
+```bash
+python src/visualization/plot_lexicon_analysis.py
+
+3. Plot performance metrics:
+```bash
+python src/visualization/plot_performance_metrics.py
