@@ -43,9 +43,10 @@ Classification Performance:
 Zero-shot learning achieved low accuracy (~2%).
 Few-shot learning significantly outperformed zero-shot, achieving up to 60% accuracy with improved precision and recall.
 These results establish a baseline for GPT-based AI text detection and highlight the importance of few-shot learning in low-resource settings.
-Repository Structure
+
+## Repository Structure
+
 plaintext
-Copia codice
 ai_detection/
 ├── data/
 │   ├── raw/                    # Raw datasets
@@ -82,7 +83,9 @@ ai_detection/
 ├── setup.py                    # Installation script
 ├── run_pipeline.py             # Main script to execute the entire pipeline
 └── README.md                   # Project documentation
-Setup Instructions
+
+
+## Setup Instructions
 Prerequisites
 Python 3.8 or higher
 Access to the gemini-1.5-fast API
