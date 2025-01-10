@@ -65,7 +65,7 @@ AI-content-detection-with-gpt-models/
 │
 ├── src/  # Source code for the project's core functionality
 │   ├── scraping/
-│   │   ├── scrape_paul_graham.py
+│   │   ├── web_scraper.py
 │   │   ├── README.md
 │   ├── preprocessing/
 │   │   ├── normalize_tokenize_lemmatize.py
@@ -132,7 +132,7 @@ python -m unittest discover tests/
 ### Step 3: Data Preparation and AI content generation
 1. Scrape Paul Graham’s blog posts:
 ```bash
-python src/scraping/scrape_paul_graham.py
+python src/scraping/web_scraping.py
 ```
 2. Enrich human-generated dataset with themes' codes through LLM-based thematic analysis:
 ```bash
