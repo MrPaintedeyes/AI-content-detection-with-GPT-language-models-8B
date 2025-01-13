@@ -48,18 +48,18 @@ AI-content-detection-with-gpt-8B-models/
 │   ├── scraping/
 │   │   └── web_scraper.py # scrapes posts from Paul Graham blog
 │   ├── preprocessing/
-│   │   ├── normalize_tokenize_lemmatize.py # normalization, tokenization and lemmatization of texts
-│   │   ├── topic_labeler.py # calls a language model to attach topic labels to the human blog posts
-│   │   └── human_ai_data_mixer.py # merges the human- and AI-generated datasets
+│   │   ├── normalize_tokenize_lemmatize.py
+│   │   ├── topic_labeler.py
+│   │   └── human_ai_data_mixer.py
 │   ├── linguistic_analysis/
-│   │   ├── lexicon_analysis_visualization.py # counts and ranks lemmas across all blog posts, plots lemmas distribution
-│   │   └── topic_analysis_visualization.py # counts topics occurences per category, plots topics distribution
+│   │   ├── lexicon_analysis_visualization.py
+│   │   └── topic_analysis_visualization.py
 │   ├── content_generation/
-│   │   ├── ai_content_generator.py # generates synthetic blog posts mirroring Paul Grahams topics, style and tone
+│   │   ├── ai_content_generator.py
 │   └── classification/
-│       ├── zero_shot_classifier.py # implement classification task with zero-shot learning
-│       ├── few_shot_classifier.py # implement classification task with few-shot learning
-│       └── performance_analysis_visualization.py # measures TP, TN, FP, FN and performance metrics, plots results
+│       ├── zero_shot_classifier.pyg
+│       ├── few_shot_classifier.py
+│       └── performance_analysis_visualization.py 
 │
 ├── report/ # 4-page double column project report
 │   └── unibo_python_project_giovannimariaocchipinti.pdf/
@@ -69,6 +69,16 @@ AI-content-detection-with-gpt-8B-models/
 ├── .gitignore
 └── LICENSE
 ```
+- web_scraper.py scrapes posts from Paul Graham blog
+- normalize_tokenize_lemmatize.py implements normalization, tokenization and lemmatization of all blog posts
+- topic_labeler.py calls a language model to attach topic labels to the human blog posts
+- human_ai_data_mixer.py merges the human- and AI-generated datasets
+- lexicon_analysis_visualization.py counts and ranks lemmas across all blog posts, plots lemmas distribution
+- lexicon_analysis_visualization.py counts topics occurences across all blog posts, then plots topics distribution
+- ai_content_generator.py generates synthetic blog posts mirroring Paul Grahams topics, style and tone
+- zero_shot_classifier.py implements classification task with zero-shot learning
+- few_shot_classifier.py implements the classification task with few-shot learning
+- performance_analysis_visualization.py measures TP, TN, FP, FN and performance metrics, plots results
 
 ## Getting started
 The project's code could take a couple of hours to run entirely (due to the model's multiple API calls). Thus, to access snippets, graphs, results quickly, you can look at the jupyter notebook within the repository following these steps directly *from your terminal*:
