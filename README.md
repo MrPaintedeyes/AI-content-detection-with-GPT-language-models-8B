@@ -39,11 +39,10 @@ AI-content-detection-with-gpt-8B-models/
 │   ├── human_blog_posts_processed.json
 │   ├── ai_generated_blog_posts_processed.json
 │   ├── model_classification_results.json
-│   ├── model_performance_metrics.json
-│   └── README.md
+│   └── model_performance_metrics.json
 │
 ├── notebooks/
-│
+│   └── project_showcase.ipynb
 ├── src/  # source code for the project's core modules
 │   ├── scraping/
 │   │   └── web_scraper.py # scrapes posts from Paul Graham blog
@@ -103,7 +102,7 @@ source venv/bin/activate  # Windows ---> use .\env\Scripts\activate
 ```bash
 pip install -r requirements.txt
 ```
-6. Launch the jupyter notebook with main snippets, graphs and explanations:
+6. Launch jupyter lab and go to the notebook folder containing the .ipynb file with main snippets, graphs and explanations:
 ```bash
 jupyter lab
 ```
