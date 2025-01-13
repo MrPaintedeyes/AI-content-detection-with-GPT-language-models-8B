@@ -1,0 +1,1 @@
+{"accuracy zero-shot": 0.5, "accuracy few-shot": 0.7777777777777778, "precision zero-shot": 0, "precision few-shot": 1.0, "recall zero-shot": 0.0, "recall few-shot": 0.5555555555555556, "F1-score zero-shot": 0, "F1-score few-shot": 0.7142857142857143}
