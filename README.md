@@ -1,4 +1,4 @@
-# Is this AI-Generated? A Comparative Analysis of Zero-Shot and Few-Shot Text Classification with GPT-based Language Models
+# Is this AI-Generated? A comparative analysis of zero-shot and few-shot text classification with GPT-based language models
 
 ## Abstract
 The rise of AI-generated content presents a growing need for low-resource, scalable detection methods. This project explores the performance of GPT-based small language models (gemini-1.5-fast 8B), leveraging zero-shot and few-shot learning for binary text classification of human- and AI-generated content. By creating a dataset of human-written blog posts by Paul Graham and generating AI texts through Google’s gemini-1.5-fast aligned for topics, tone and style, we aim to establish baseline performance metrics in distinguishing between human and AI-generated content with in-context learning approaches, hoping to provide a foundation for future research and applications. Our findings highlight the advantages of few-shot learning over zero-shot learning, altough they are both unrealiable for a consistent detection of AI-generated texts. 
