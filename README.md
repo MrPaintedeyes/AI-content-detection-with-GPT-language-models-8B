@@ -108,7 +108,7 @@ jupyter lab
 ```
 
 ### Steps to run the entire code and replicate end-to-end the research
-Following the next step-by-step procedure, you will be able to collect, transform, and analyze the data again. Plus, you will implement the classification tasks, and analyze/visualize the results (just take into account it could take a couple of hours to run entirely).
+Following the next step-by-step procedure, you will be able to collect, transform, and analyze the data again. Plus, you will implement the classification tasks, and analyze/visualize the results (just take into account it could take a couple of hours to run entirely). Consider that you need Python 3.12.5 to run the project.
 
 1. Scrape Paul Graham’s blog posts:
 ```bash
